@@ -1,0 +1,159 @@
+body {
+    background-color: orange;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+}
+
+.title {
+    background-image: url(../images/title-border.png);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: black;
+    color: orange;
+    font-size: clamp(40px, 7vw, 55px);
+    width: 100%;
+}
+
+.gallery {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 35px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.gallery::after {
+    content: "";
+    width: 360px;
+}
+
+.gallery img {
+    width: 340px;
+    height: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: width 1s, height 1s;
+    transition-timing-function: ease-out;
+}
+
+
+
+.gallery img:hover {
+    width: 370px;
+    height: 370px;
+    border: 4px solid orange;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 4px solid orange;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.gallery div ul {
+    text-align: left;
+    color: white;
+    background-color: black;
+    border: 4px solid orange;
+    border-radius: 10px;
+    font-size: 17px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+}
+
+.gallery div ul li {
+    width: 280px;
+    font-weight: 600;
+}
+
+.options {
+    height: 10vh;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    
+}
+
+.options ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+    background-image: url(../images/title-border.png);
+    background-size: contain;
+    margin-top: 10px;
+    position: fixed;
+    bottom: -2.5vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+a:hover {
+    color: black;
+}
+
+.options ul li {
+    border: 3px solid orange;
+    padding: 5px;
+    border-radius: 15px;
+    color: orange;
+    font-size: clamp(14px, 2vh, 25px);
+    margin-right: 30px;
+    transition: .5s ease-out;
+}
+
+.options ul li:hover {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-weight: 600;
+}
+
+
+
+
+@media screen and (max-height: 420px) {
+    .heading {
+        height: 35vh;
+    }
+    .title {
+        height: 22vh;
+    }
+    
+    .options ul {
+        height: 15vh;
+        bottom: -4.5vh;
+
+    }
+
+    .option ul li {
+        
+    }
+}
